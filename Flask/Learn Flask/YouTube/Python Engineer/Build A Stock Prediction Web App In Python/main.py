@@ -13,7 +13,7 @@ TODAY = date.today().strftime("%Y-%m-%d")
 
 st.title("Stock Prediction")
 
-stocks = ("AAPL", "GOOG", "MSFT", "GME", "PAGEIND", "RELIANCE")
+stocks = ("AAPL", "GOOG", "MSFT", "GME", "PAGEIND.NS", "RELIANCE.NS","HDFC.NS")
 
 selected_stock = st.selectbox("Select dataset for predictions", stocks)
 
