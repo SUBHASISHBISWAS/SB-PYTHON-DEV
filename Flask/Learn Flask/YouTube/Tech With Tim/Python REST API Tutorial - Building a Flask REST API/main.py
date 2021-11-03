@@ -6,13 +6,13 @@ api = Api(app)
 
 
 class HelloWorld(Resource):
-    def get(self):
-        return {"Hello": "SUBHASISH"}
+    def get(self, name, age):
+        return {name:age}
 
     def post(self):
         return {"POST", "SUBHASISH"}
 
 
-api.add_resource(HelloWorld, "/helloworld")
+api.add_resource(HelloWorld, "/helloworld/<string:name>/<int:age>")
 if __name__ == "__main__":
     app.run(debug=True)
