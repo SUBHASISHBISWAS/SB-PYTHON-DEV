@@ -13,7 +13,7 @@ TODAY = date.today().strftime("%Y-%m-%d")
 
 st.title("Stock Prediction")
 
-stocks = ("AAPL", "GOOG", "MSFT", "GME", "PAGEIND.NS", "RELIANCE.NS","HDFC.NS")
+stocks = ("AAPL", "GOOG", "MSFT", "GME", "PAGEIND.NS", "RELIANCE.NS", "HDFC.NS")
 
 selected_stock = st.selectbox("Select dataset for predictions", stocks)
 
@@ -58,9 +58,9 @@ forecast = m.predict(future)
 st.subheader("Forecast Data")
 st.write(forecast.tail(10))
 
-fig1=plot_plotly(m,forecast)
+fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
 
 st.write("Forecast Component")
-fig2=m.plot_components(forecast)
+fig2 = m.plot_components(forecast)
 st.write(fig2)
